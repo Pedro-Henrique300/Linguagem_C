@@ -1,0 +1,1 @@
+Olá, bem vindo ao meu joguinho ^-^. Ele é bem simples...como o próprio nome já diz se trata de um jogo de adivinhação aonde o usuario terá 5 tentativas de adivinhar o número que a computador ira " pensar ". Aceito feedback para melhorar.
