@@ -1,8 +1,8 @@
 #include<stdio.h>
 
 /*
-C = Montante
-I = Taxa ( CDI )
+C = Capital
+I = CDI
 t = Valor da taxa
 */
 
