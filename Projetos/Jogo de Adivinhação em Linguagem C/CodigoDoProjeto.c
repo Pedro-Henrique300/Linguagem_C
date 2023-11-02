@@ -1,10 +1,8 @@
 #include<stdio.h>
-#include<stdlib.h>
 #include<time.h>
 
 
-int main()
-{
+int main(){
 	
 	int jogador, computador, tentativas;
 	char nome[10];
@@ -20,25 +18,33 @@ int main()
 	printf("  Voce tem 5 tentativas %s O.o\n", nome);
 	printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
-	for(tentativas = 0; tentativas <= 5; tentativas ++)
-	{
+	for(tentativas = 0; tentativas <= 5; tentativas ++){
+		
 		printf("\n\n\tEm qual numero pensei? ");
 		scanf("%d", &jogador);
 		
-		if(tentativas == 5)
-		{
-			printf("\n  Nao foi dessa vez! Tente novamente ^-^");
+		if(tentativas == 5){
+			
+			printf("\n  Nao foi dessa vez! Tente novamente ^-^\n");
 			break;
 		}
-		if(jogador == computador)
-		{
-			printf("\n  Acertooouu!!! Parabens! ^-^");
+		
+		if(jogador == computador){
+			
+			printf("\n  Acertooouu!!! Parabens! ^-^\n");
 			break;
 		}
-		else
-		{
+		
+		else{
+			
 			printf("\n  Errooouu!!!\n  Eu pensei no numero %d e nao no numero %d O.o\n", computador, jogador);
 			printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 		}
 	}
+	
+	printf("\nTecle >ENTER< para encerrar...");
+	getchar();
+	
+	return 0;
+	
 }
