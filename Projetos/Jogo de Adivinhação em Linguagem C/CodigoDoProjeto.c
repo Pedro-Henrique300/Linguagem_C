@@ -1,20 +1,22 @@
 #include<stdio.h>
 #include<time.h>
+#include<locale.h>
 
 
 int main(){
+	setlocale(LC_ALL, "Portuguese");
 	
 	int jogador, computador, tentativas;
-	char nome[10];
+	char nome[20];
 	
 	printf("\n  Digite o seu nome: ");
-	scanf("%9[^\n]s", nome);
+	scanf("%19[^\n]s", nome);
 	
 	srand(time(NULL));
 	computador = rand()%6;
 	
 	printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-	printf("  Eu vou pensar em um numero entre 0 a 5! E voce vai ter que adivinhar...\n");
+	printf("  Eu vou pensar em um número entre 0 a 5! E voce vai ter que adivinhar...\n");
 	printf("  Voce tem 5 tentativas %s O.o\n", nome);
 	printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
@@ -25,7 +27,7 @@ int main(){
 		
 		if(tentativas == 5){
 			
-			printf("\n  Nao foi dessa vez! Tente novamente ^-^\n");
+			printf("\n  Não foi dessa vez! Tente novamente ^-^\n");
 			break;
 		}
 		
@@ -37,12 +39,13 @@ int main(){
 		
 		else{
 			
-			printf("\n  Errooouu!!!\n  Eu pensei no numero %d e nao no numero %d O.o\n", computador, jogador);
+			printf("\n  Errooouu!!!\n  Eu pensei no número %d e não no número %d O.o\n", computador, jogador);
 			printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 		}
 	}
 	
 	printf("\nTecle >ENTER< para encerrar...");
+	getchar();
 	getchar();
 	
 	return 0;
