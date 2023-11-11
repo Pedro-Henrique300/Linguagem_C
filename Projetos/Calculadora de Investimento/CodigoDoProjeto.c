@@ -18,7 +18,7 @@ main(){
 	scanf("%f", &C);
 	fflush(stdin);
 	
-	printf("\nInforme a taxa de CDI atualmente (sem o %%, e troque , por . por favor): ");
+	printf("\nInforme a taxa de CDI atualmente (sem o %%, por favor): ");
 	scanf("%f", &I);
 	fflush(stdin);
 	
