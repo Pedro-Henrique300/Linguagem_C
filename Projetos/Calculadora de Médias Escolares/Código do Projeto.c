@@ -95,7 +95,25 @@ int main(){
 		printf("\tNota Final em História: %.2f\n", lista[i].historia);
 		printf("\tNota Final em Geográfia: %.2f\n\n", lista[i].geografia);
 		printf("\tMédia Final: %.2f\n", media[i]);
+		
+		if(media[i] < 7){
+			
+			printf("\tSituação: REPROVADO!\n");
+			
+		}
+		
+		else{
+			
+			printf("\tSituação: APROVADO!\n");
+			
+		}
+		
 		printf("-------------------------------------------------------\n\n");
+		
 	}
+	
+	printf("Pressione >Enter< para encerrar!");
+	getchar();
+	getchar();
 	
 }
