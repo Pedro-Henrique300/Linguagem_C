@@ -3,22 +3,22 @@
 
 /*
 C = Capital
-I = CDI
+I = Juros
 t = Valor da taxa
 */
 
 
-main(){
+int main(){
 	setlocale(LC_ALL, "Portuguese");
 	
 	float C, I, t;
 	int i, meses;
 	
-	printf("Informe o quanto de dinheiro vai ser investido: R$ ");
+	printf("\nInforme o seu capital: R$ ");
 	scanf("%f", &C);
 	fflush(stdin);
 	
-	printf("\nInforme a taxa de CDI atualmente (sem o %%, por favor): ");
+	printf("\nInforme a taxa de juros (sem o %%, por favor): ");
 	scanf("%f", &I);
 	fflush(stdin);
 	
@@ -32,7 +32,7 @@ main(){
 	for(i=1; i<=meses; i++){
 		
 		C *= t;
-		printf("\nNo %dº mês após o investimento você estará com R$%.2f\n", i, C);
+		printf("\nNo %dº mês com o juros aplicado o valor será: R$%.2f\n", i, C);
 }
 	
 	printf("\nPressione >Enter< para encerrar...");

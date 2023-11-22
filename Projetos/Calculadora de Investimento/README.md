@@ -1,1 +1,0 @@
-Bom, é um projetinho simples...estava vendo sobre juros e pensei " por que não criar um programa pra calcular o quanto terei em 1 ano com tantos investidos? " e aqui está, fiz também em python, também está aqui no GitHub.
