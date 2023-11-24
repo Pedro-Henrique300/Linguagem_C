@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<locale.h>
 #include<stdlib.h>
-#include<string.h>
 #include<windows.h>
 
 struct nota_aluno{
@@ -22,7 +21,7 @@ int main(){
 
     int i, numero_alunos;
 
-    printf("\nQuantos alunos s„o? ");
+    printf("\nQuantos alunos s√£o? ");
     scanf("%d", &numero_alunos);
     fflush(stdin);
 
@@ -30,17 +29,17 @@ int main(){
     float media[numero_alunos];
     char situacao[20]; 
 
-    printf("\n\nOK! Vamos calcular a mÈdia e verificar a situac„o de %d aluno(s) ent„o.", numero_alunos);
+    printf("\n\nOK! Vamos calcular a m√©dia e verificar a situac√£o de %d aluno(s) ent√£o.", numero_alunos);
     Sleep(4000);
     system("cls");
 
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
     for(i = 0; i < numero_alunos; i++){
-        media[i] = 0; // Inicializando as mÈdias para evitar valores inesperados
+        media[i] = 0; // Inicializando as m√©dias para evitar valores inesperados
 
         printf("-------------------------------------\n");
-        printf("Informe os dados do(a) %d∫ aluno(a):\n", i+1);
+        printf("Informe os dados do(a) %d¬∫ aluno(a):\n", i+1);
         printf("-------------------------------------\n");
 
         printf("Nome: ");
@@ -51,27 +50,27 @@ int main(){
         scanf("%d", &lista[i].idade);
         fflush(stdin);
 
-        printf("Nota Final em Matem·tica: ");
+        printf("Nota Final em Matem√°tica: ");
         scanf("%f", &lista[i].matematica);
         fflush(stdin);
 
-        printf("Nota Final em PortuguÍs: ");
+        printf("Nota Final em Portugu√™s: ");
 		scanf("%f", &lista[i].portugues);
 		fflush(stdin);
 		
-		printf("Nota Final em InglÍs: ");
+		printf("Nota Final em Ingl√™s: ");
 		scanf("%f", &lista[i].ingles);
 		fflush(stdin);
 		
-		printf("Nota Final em CiÍncias: ");
+		printf("Nota Final em Ci√™ncias: ");
 		scanf("%f", &lista[i].ciencias);
 		fflush(stdin);
 		
-		printf("Nota Final em HistÛria: ");
+		printf("Nota Final em Hist√≥ria: ");
 		scanf("%f", &lista[i].historia);
 		fflush(stdin);
 		
-		printf("Nota Final em Geogr·fia: ");
+		printf("Nota Final em Geogr√°fia: ");
 		scanf("%f", &lista[i].geografia);
 		fflush(stdin);
 
@@ -90,33 +89,33 @@ int main(){
     for(i = 0; i < numero_alunos; i++){
         
         
-        SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE); // Restaurar cor padr„o
-        printf("\n-------------Resultado %d∫ aluno(a)------------------\n", i+1);
+        SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE); // Restaurar cor padr√£o
+        printf("\n-------------Resultado %d¬∫ aluno(a)------------------\n", i+1);
         printf("\tNome: %s\n", lista[i].nome);
         printf("\tIdade: %d\n\n", lista[i].idade);
 
-        printf("\tNota Final em Matem·tica: %.2f\n", lista[i].matematica);
-		printf("\tNota Final em PortuguÍs: %.2f\n", lista[i].portugues);
-		printf("\tNota Final em InglÍs: %.2f\n", lista[i].ingles);
-		printf("\tNota Final em CiÍncias: %.2f\n", lista[i].ciencias);
-		printf("\tNota Final em HistÛria: %.2f\n", lista[i].historia);
-		printf("\tNota Final em Geogr·fia: %.2f\n\n", lista[i].geografia);
+        printf("\tNota Final em Matem√°tica: %.2f\n", lista[i].matematica);
+		printf("\tNota Final em Portugu√™s: %.2f\n", lista[i].portugues);
+		printf("\tNota Final em Ingl√™s: %.2f\n", lista[i].ingles);
+		printf("\tNota Final em Ci√™ncias: %.2f\n", lista[i].ciencias);
+		printf("\tNota Final em Hist√≥ria: %.2f\n", lista[i].historia);
+		printf("\tNota Final em Geogr√°fia: %.2f\n\n", lista[i].geografia);
 
-        printf("\tMÈdia Final: %.2f\n", media[i]);
-        printf("\tSituaÁ„o: ");
+        printf("\tM√©dia Final: %.2f\n", media[i]);
+        printf("\tSitua√ß√£o: ");
         
     	if(media[i] < 5){
     		SetConsoleTextAttribute(hConsole, FOREGROUND_RED); // Alterando a cor do texto para vermelho
             printf("REPROVADO!\n");
         }else if(media[i] < 7){
         	SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN); // Alterando a cor do texto para amarelo
-            printf("RECUPERA«√O!\n");
+            printf("RECUPERA√á√ÉO!\n");
         }else{
         	SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN); // Alterando a cor do texto para verde
             printf("APROVADO!\n");
         }
         
-        SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE); // Restaurar cor padr„o
+        SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE); // Restaurar cor padr√£o
         printf("-------------------------------------------------------\n\n");
     }
     
