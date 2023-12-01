@@ -1,6 +1,6 @@
 [Project]
-FileName=Aumento_de_salario.dev
-Name=Aumento_de_salario
+FileName=Numeros_primos_em_vetor.dev
+Name=Numeros_primos_em_vetor
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=..\Aumento_de_salario\main.c
+FileName=main.c
 CompileCpp=0
 Folder=
 Compile=1
